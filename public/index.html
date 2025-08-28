@@ -282,37 +282,43 @@
  			 </div>
 		</div>
 
-			
-		<script>
-			window.onscroll = function (e) {
-				const headerImg = document.querySelector('#headerImg');
-				if (headerImg.getBoundingClientRect().bottom <= 0) {
-					document.querySelector('#headerStuck').classList.add('is-stuck');
-			  	} else {
-			  		document.querySelector('#headerStuck').classList.remove('is-stuck');
-			  	}
-			};
-			var style = localStorage.getItem('data-color-mode');
-			iconElement = document.getElementById('github-icon');
-			if (style == 'light') {
-				iconElement.setAttribute('fill', '#24292e');
-			}
-			else {
-				iconElement.removeAttribute('fill');
-				iconElement.setAttribute('class', 'octicon');
-				iconElement.setAttribute('color', '#f0f6fc');
-			}
-		</script>
-
-		<script type="application/javascript" src="/js/github-style.js"></script>
-
-	</main>
+		
+					
 </div>
-
+</div>
+</div>
+</div>
+</div>
+</div>
+		
+<script>
+	window.onscroll = function (e) {
+		const headerImg = document.querySelector('#headerImg');
+		if (headerImg.getBoundingClientRect().bottom <= 0) {
+			document.querySelector('#headerStuck').classList.add('is-stuck');
+		} else {
+			document.querySelector('#headerStuck').classList.remove('is-stuck');
+		}
+	};
+	var style = localStorage.getItem('data-color-mode');
+	iconElement = document.getElementById('github-icon');
+	if (style == 'light') {
+		iconElement.setAttribute('fill', '#24292e');
+	}
+	else {
+		iconElement.removeAttribute('fill');
+		iconElement.setAttribute('class', 'octicon');
+		iconElement.setAttribute('color', '#f0f6fc');
+	}
+</script>
+			
+<script type="application/javascript" src="/js/github-style.js"></script>
+		
+</div>
+		
 <div class="footer container-xl width-full p-responsive">
 	<div class="pt-6 mt-6 ">
-  	</div>
-</div>
-	
+	</div>
+<div>
 </body>
 </html>
