@@ -1,4 +1,4 @@
-## vonsteinkirch.com website
+## vonsteinkirch.com
 
 <br>
 
