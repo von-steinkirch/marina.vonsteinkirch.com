@@ -199,31 +199,34 @@
 					writing-mode: vertical-rl;
 					text-orientation: mixed;
 					font-size: 24px;
-					font-weight: bold;
-					font-family: 'Arial Black', 'Helvetica Bold', sans-serif;
-					color: #bf00ff;
+					font-weight: 900;
+					font-family: 'Orbitron', 'Arial Black', 'Helvetica Bold', sans-serif;
+					color: #efb7e0;
 					text-shadow: 
 						0 0 5px #bf00ff,
 						0 0 10px #bf00ff,
 						0 0 15px #bf00ff,
 						0 0 20px #bf00ff,
 						0 0 25px #bf00ff,
-						0 0 30px #bf00ff;
-					animation: neon-flicker 1.5s infinite alternate;
+						0 0 30px #bf00ff,
+						0 0 35px #bf00ff;
+					animation: neon-flicker 2s infinite alternate;
 					transform: rotate(225deg);
 					padding: 25px 12px;
-					border: 2px solid #bf00ff;
+					border: 3px solid #bf00ff;
 					border-radius: 15px;
-					background: rgba(191, 0, 255, 0.1);
-					backdrop-filter: blur(3px);
+					background: rgba(191, 0, 255, 0.15);
+					backdrop-filter: blur(5px);
 					box-shadow: 
-						0 0 20px rgba(191, 0, 255, 0.5),
-						0 0 40px rgba(191, 0, 255, 0.3),
-						inset 0 0 20px rgba(191, 0, 255, 0.1);
+						0 0 20px rgba(191, 0, 255, 0.6),
+						0 0 40px rgba(191, 0, 255, 0.4),
+						0 0 60px rgba(191, 0, 255, 0.3),
+						inset 0 0 20px rgba(191, 0, 255, 0.2);
 					position: relative;
 					z-index: 10;
+					letter-spacing: 1px;
 				">
-					impossible is a state of mind
+					IMPOSSIBLE IS A STATE OF MIND
 				</div>
 			</div>
 
@@ -236,16 +239,17 @@
 							0 0 15px #bf00ff,
 							0 0 20px #bf00ff,
 							0 0 25px #bf00ff,
-							0 0 30px #bf00ff;
+							0 0 30px #bf00ff,
+							0 0 35px #bf00ff;
 					}
 					20%, 24%, 55% {
 						text-shadow: 
-							0 0 2px #bf00ff,
-							0 0 5px #bf00ff,
+							0 0 3px #bf00ff,
 							0 0 8px #bf00ff,
 							0 0 12px #bf00ff,
 							0 0 18px #bf00ff,
-							0 0 25px #bf00ff;
+							0 0 25px #bf00ff,
+							0 0 32px #bf00ff;
 					}
 				}
 				
@@ -298,6 +302,37 @@
 							inset 0 0 10px rgba(191, 0, 255, 0.05);
 					}
 				}
+				
+				.neon-content-box {
+					border: 3px solid #bf00ff !important;
+					border-radius: 8px !important;
+					box-shadow: 
+						0 0 20px rgba(191, 0, 255, 0.5),
+						0 0 40px rgba(191, 0, 255, 0.3),
+						0 0 60px rgba(191, 0, 255, 0.2),
+						inset 0 0 20px rgba(191, 0, 255, 0.1);
+					animation: neon-content-glow 2s infinite alternate;
+					transition: all 0.3s ease-in-out;
+				}
+				
+
+				
+				@keyframes neon-content-glow {
+					0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+						box-shadow: 
+							0 0 20px rgba(191, 0, 255, 0.5),
+							0 0 40px rgba(191, 0, 255, 0.3),
+							0 0 60px rgba(191, 0, 255, 0.2),
+							inset 0 0 20px rgba(191, 0, 255, 0.1);
+					}
+					20%, 24%, 55% {
+						box-shadow: 
+							0 0 10px rgba(191, 0, 255, 0.3),
+							0 0 20px rgba(191, 0, 255, 0.2),
+							0 0 30px rgba(191, 0, 255, 0.1),
+							inset 0 0 10px rgba(191, 0, 255, 0.05);
+					}
+				}
 			</style>
 
 	</div>
@@ -330,7 +365,7 @@
 	</div>
 	<div>
 		<div class="position-relative">
-			<div class="Box mt-4">
+			<div class="Box mt-4 neon-content-box">
 				<div class="Box-body p-4">
 					<div class="d-flex flex-justify-between">
 						<div class="text-mono text-small mb-3">
@@ -344,9 +379,15 @@
 
 <article class="markdown-body entry-content container-lg f5">
 
+		<br>
 	<h1 id="-open-source-projects"><span style="color: HotPink;">Open-Source Projects I Wrote</span></h1>
 
-	<h4><span style="color: rgb(18, 246, 87);">Theoretical Physics || Astrophysics || Quantum Computing</span></h4>
+	<br>
+
+	<h3><span style="color: rgb(18, 246, 87);">Theoretical Physics || Astrophysics || Quantum Computing</span></h3>
+
+	<br>
+
 	<ul>
 		<li><strong><a target="_blank" href="https://github.com/autistic-symposium/astrophysics-mfits-py">👾👾👾👾 astrophysics-mfits-py</a></strong>, a tool for statistical analysis of x-ray bursters (python, idl)</li>
 		<li><strong><a target="_blank" href="https://github.com/autistic-symposium/interstellar">👾👾👾👾 interstellar-idl</a></strong>, a tool for analyzing interstellar dust (monte carlo, idl)</li>
@@ -358,7 +399,12 @@
 		<li><strong><a target="_blank" href="https://github.com/autistic-symposium/quantum-computing-toolkit">👾👾 quantum-computing-toolkit</a></strong>, quantum computing and cryptography resources (python)</li>
 	</ul>
 	
-	<h4><span style="color: rgb(18, 246, 87);">Blockchains || Decentralized Finance</span></h4>
+	<br>
+
+	<h3><span style="color: rgb(18, 246, 87);">Blockchains || Decentralized Finance</span></h3>
+
+	<br>
+
 	<ul>
 		<li><strong><a target="_blank" href="https://github.com/autistic-symposium/searcher-cowswap-py">👾👾👾👾 searcher-cowswap-py</a></strong>, a CoW protocol arbitrage mev solver (python)</li>
 		<li><strong><a target="_blank" href="https://github.com/autistic-symposium/amm-arbitrage-tool-py">👾👾👾👾 amm-arbitrage-tool-py</a></strong>, a tool for arbitrage on uniswap v2 &amp;&amp; forks (python)</li>
@@ -382,7 +428,12 @@
 		<li><strong><a target="_blank" href="https://github.com/autistic-symposium/coin-mixer-py">👾👾 coin-mixer-py</a></strong>, back-of-the-envelope proof-of-concept (python)</li>
 	</ul>
 	
-	<h4><span style="color: rgb(18, 246, 87);">Artificial Intelligence || Machine Learning || Robotics</span></h4>
+	<br>
+
+	<h3><span style="color: rgb(18, 246, 87);">Artificial Intelligence || Machine Learning || Robotics</span></h3>
+
+	<br>
+
 	<ul>
 		<li><strong><a target="_blank" href="https://github.com/autistic-symposium/mlnet-complex-networks">👾👾👾👾 mlnet-complex-networks-py</a></strong>, classify complex networks with ml (python, networkx)</li>
 		<li><strong><a target="_blank" href="https://github.com/autistic-symposium/ml-graph-network-analyser">👾👾👾👾 ml-graph-network-analyser-py</a></strong>, a tool for graph analysis (python, networkx)</li>
@@ -395,9 +446,14 @@
 		<li><strong><a target="_blank" href="https://github.com/autistic-symposium/robotics-matlab">👾👾👾 robotics-matlab</a></strong>, several experiments with depth sensors (c++, matlab)</li>
 		<li><strong><a target="_blank" href="https://github.com/autistic-symposium/cuda-for-deep-learning-c">👾 cuda-for-deep-learning-c</a></strong>, random notes from helping with apple's deep learning research (c++)</li>
 		<li><strong><a target="_blank" href="https://github.com/autistic-symposium/ml-netclean">👾 ml-netclean-py</a></strong>, code for cleansing vector data for complex networks (python, shell)</li>
-	</ul>	
+	</ul>
+	
+	<br>
 
-		<h4><span style="color: rgb(18, 246, 87);">Privacy || Security || Infrastructure</span></h4>
+	<h3><span style="color: rgb(18, 246, 87);">Privacy || Security || Infrastructure</span></h3>
+
+	<br>
+
 	<ul>
 		<li><strong><a target="_blank" href="https://github.com/autistic-symposium/surfline-pipeline-aws-py">👾👾👾👾 surfline-pipeline-py</a></strong>, my production-grade code for <strong><a target="_blank" href="https://www.surfline.com/lp/sessions">surfline sessions</a></strong> (python, terraform, docker)</li>
 		<li><strong><a target="_blank" href="https://github.com/autistic-symposium/master-algorithms-py">👾👾👾👾 master-algorithms-py</a></strong>, a comprehensive book on algorithms and data structures (python)</li>	
@@ -410,10 +466,12 @@
 	</ul>
 
 	<br>
-	<hr>
+	<br>
 
 	<h1><span style="color: HotPink;">Third-Party Open-Source Projects I've Contributed To</span></h1>
 	
+	<br>
+
 	<ul>	
 		<li><strong><a target="_blank" href="https://github.com/Yelp/threat_intel">👾👾👾👾 yelp's threat intel</a></strong>, apis for several intel and ioc feeds for incident response (python)</strong></li>
 		<li><strong><a target="_blank" href="https://github.com/aws/s2n-tls">👾👾👾👾 aws's s2n-tls</a></strong>, aws's implementation of the tls/ssl protocols (c, rust)</li>
@@ -426,11 +484,16 @@
 	</ul>
 
 	<br>
-	<hr>
+	<br>
 
 	<h1><span style="color: HotPink;">My Public Technical Research</span></h1>
 		
-	<h4><span style="color: rgb(18, 246, 87);">Theoretical Physics || Astrophysics || Quantum Computing</span></h4>
+	<br>
+
+	<h3><span style="color: rgb(18, 246, 87);">Theoretical Physics || Astrophysics || Quantum Computing</span></h3>
+
+	<br>
+
 	<ul>	
 		<li><strong><a target="_blank" href="https://www.astro.sunysb.edu/steinkirch/books/group.pdf">👾👾👾👾👾👾 On Group Theory for Physicists [e-book]</a></strong></li>
 		<li><strong><a target="_blank" href="https://iopscience.iop.org/article/10.3847/0004-637X/832/2/102">👾👾👾👾👾👾 On Modeling X-Rays Bursting Neutron Stars [The Astrophysical Journal]</a></strong></li>
@@ -466,7 +529,12 @@
 		<li><strong><a target="_blank" href="https://www.astro.sunysb.edu/steinkirch/reviews/lab_spec.pdf">👾👾 On the Spectra of H and Na [portuguese, multiple authors]</a></strong></li>
 	</ul>
 	
-	<h4><span style="color: rgb(18, 246, 87);">Blockchains || Decentralized Finance</span></h4>	
+	<br>
+
+		<h3><span style="color: rgb(18, 246, 87);">Blockchains || Decentralized Finance</span></h3>
+
+	<br>
+
 	<ul>
 		<li><strong><a target="_blank" href="https://mirror.xyz/go-outside.eth/o_IkRyHG9knfuW2pfZ1nnnM6a-Hccom8J6wBOJDc-aU">👾👾👾👾 On Hacking Systematically with Foundry</a></strong></li>		
 		<li><strong><a target="_blank" href="https://mirror.xyz/go-outside.eth/zX1BaGZLHAcQOKdhFnSSM0VW67_-OFCi5ZegGFPryvg">👾👾👾👾 On My Rusty Sparse Merkle Tree Experiment</a></strong></li>	
@@ -499,7 +567,12 @@
 		<li><strong><a target="_blank" href="https://mirror.xyz/go-outside.eth/rGyGGoOLek_pCoJVlSFSjjFL-b5_Mw_P5hC3giwUCtc">👾 On Flashbots Auctions in 5 Minutes</a></strong></li>
 	</ul>
 
-	<h4><span style="color: rgb(18, 246, 87);">Artificial Intelligence || Machine Learning || Robotics</span></h4>
+	<br>
+
+	<h3><span style="color: rgb(18, 246, 87);">Artificial Intelligence || Machine Learning || Robotics</span></h3>
+
+	<br>
+
 	<ul>	
 		<li><strong><a target="_blank" href="https://www.astro.sunysb.edu/steinkirch/reviews/kin_rob.pdf">👾👾👾👾 On Depth Sensors for Gesture Recognition</a></strong></li>
 		<li><strong><a target="_blank" href="https://www.astro.sunysb.edu/steinkirch/reviews/twitter.pdf">👾👾👾👾 On Information Diffusion on Twitter</a></strong></li>
@@ -513,7 +586,12 @@
 		<li><strong><a target="_blank" href="https://singularity.vonsteinkirch.com/thinking-about-machine-learning-data-pipelines.html">👾 On Machine Learning Data Pipelines</a></strong></li>
 	</ul>
 	
-	<h4><span style="color: rgb(18, 246, 87);">Privacy || Security || Infrastructure</span></h4>
+	<br>
+
+	<h3><span style="color: rgb(18, 246, 87);">Privacy || Security || Infrastructure</span></h3>
+
+	<br>
+
 	<ul>	
 		<li><strong><a target="_blank" href="https://singularity.vonsteinkirch.com/smashing-the-stack-for-fun-or-wargames-narnia-0-4.html">👾👾👾 On Smashing the Stack for Fun or WarGames</a></strong></li>
 		<li><strong><a target="_blank" href="https://coderwall.com/p/m3excg/a-tor-proxy-in-a-raspberry-pi">👾👾👾 On a Tor Proxy in a Raspberry Pi</a></strong></li>
@@ -553,19 +631,28 @@
 	</ul>	
 	
 	<br>
-	<hr>
+	<br>
+
 
 	<h1><span style="color: HotPink;">Non-Technical Writings and Random Metas</span></h1>
 
-	<h4><span style="color: rgb(18, 246, 87);">Professional Guides && Handbooks</span></h4>
+	<br>
 
-	
+	<h3><span style="color: rgb(18, 246, 87);">Professional Guides && Handbooks</span></h3>
+
+	<br>
+
 	<ul>
 		<li><strong><a target="_blank" href="https://gist.github.com/von-steinkirch/3b330ba8f2454531de76df688955f86b">[2025] Handbook for Collaborating with Me</a></strong></li>
 		<li><strong><a target="_blank" href="mailto:hello@vonsteinkirch.com">[2025] Send a Respectful Email to My Assistant</a></strong></li>
 	</ul>
 	
-	<h4><span style="color: rgb(18, 246, 87);">Sci-Fi && Neo-Cypherpunk && Subversive Ramblings</span></h4>
+	<br>
+
+	<h3><span style="color: rgb(18, 246, 87);">Sci-Fi && Neo-Cypherpunk && Subversive Ramblings</span></h3>
+
+	<br>
+
 	<ul>
 		<li><strong><a target="_blank" href="https://gist.github.com/von-steinkirch/f7af0163c4d6f9911fa8f51e94ff7f20">[2025] On the Future 前進、そして飛躍</a></strong></li>
 		<li><strong><a target="_blank" href="https://gist.github.com/von-steinkirch/531f83073ddf23551dea649c4d37f495">[2025] DeSci + AI Short Stories</a></strong></li>
@@ -582,10 +669,14 @@
 		<li><strong><a target="_blank" href="https://web.archive.org/web/20090620090344/http://www.steinkirch.org/">[2009] An Old Lil Bytegirl's Page</a></strong></li>
 		<li><strong><a target="_blank" href="https://web.archive.org/web/20090621224750/http://www.steinkirch.org/bookmarks.html">[2009] An Old Geeky Bookmark</a></strong></li>
 		<li><strong><a target="_blank" href="https://web.archive.org/web/20070322015644/http://fly.to/bytegirl">[1998] An Even Older Lil Bytegirl's Page</a></strong></li>
-		
 	</ul>
 	
-	<h4><span style="color: rgb(18, 246, 87);">Innermost Personal Thoughts && Lists</span></h4>
+	<br>
+	
+	<h3><span style="color: rgb(18, 246, 87);">Innermost Personal Thoughts && Lists</span></h3>
+
+	<br>
+
 	<ul>
 		<li><strong><a target="_blank" href="https://gist.github.com/von-steinkirch/f04a7427b8381fc631f1d93e026e7663">[2025] My Travel Bucket List</a></strong></li>
 		<li><strong><a target="_blank" href="https://gist.github.com/von-steinkirch/74608b8f42e7b8ec2d4795284a1dbb74">[2025] The Man I Will Grow Old With</a></strong></li>
@@ -599,6 +690,9 @@
 		<li><strong><a target="_blank" href="https://midsummer.gitbook.io/choices/choices/choose-your-adventure/storytelling/the-usdchoice-of-hero/become-a-storyteller/gmf">[2022] My Favorite Directors && Bands</a></strong></li>
 		<li><strong><a target="_blank" href="to be linked after the eclipse season">[2019] My Saturnian Dark Night of the Soul</a></strong></li>
 	</ul>
+
+	<br>
+
 </article>
 					
 </div>
@@ -641,3 +735,4 @@
 <div>
 </body>
 </html>
+
