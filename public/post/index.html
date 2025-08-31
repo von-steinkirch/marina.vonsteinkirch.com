@@ -11,6 +11,9 @@
 	<link rel="stylesheet" href='/css/light.css' />
 	<link rel="stylesheet" href='/css/dark.css' />
 	<lin rel="stylesheet" href='/css/syntax.css' />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 	<title>Dr. von Steinkirch's Page</title>
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>👾</text></svg>"></link>	    
 	<meta name="theme-color" content="#1e2327">
@@ -172,7 +175,7 @@
 		        <div class="clearfix d-flex d-md-block flex-items-center mb-4 mb-md-0">
 				<div class="position-relative d-inline-block col-2 col-md-12 mr-3 mr-md-0 flex-shrink-0" style="z-index:4;">	
 					<a target="_blank" href="/images/steinkirch.png">
-				              <img style="height:auto;" alt="Avatar" width="260" height="260" id="headerImg" class="avatar avatar-user width-full border bg-white" src="/images/steinkirch.png">
+				              <img style="height:auto;" alt="Avatar" width="260" height="260" id="headerImg" class="avatar avatar-user width-full border bg-white neon-avatar" src="/images/steinkirch.png">
 					</a>
 		            
 				<div class="user-status-container position-relative hide-sm hide-md">
@@ -190,6 +193,112 @@
 				</div>
 			</div>
 			
+			<!-- Vertical Neon Banner -->
+			<div class="neon-banner-container" style="position: relative; margin-top: 60px; z-index: 10;">
+				<div class="neon-banner" id="neonBanner" style="
+					writing-mode: vertical-rl;
+					text-orientation: mixed;
+					font-size: 24px;
+					font-weight: bold;
+					font-family: 'Arial Black', 'Helvetica Bold', sans-serif;
+					color: #bf00ff;
+					text-shadow: 
+						0 0 5px #bf00ff,
+						0 0 10px #bf00ff,
+						0 0 15px #bf00ff,
+						0 0 20px #bf00ff,
+						0 0 25px #bf00ff,
+						0 0 30px #bf00ff;
+					animation: neon-flicker 1.5s infinite alternate;
+					transform: rotate(225deg);
+					padding: 25px 12px;
+					border: 2px solid #bf00ff;
+					border-radius: 15px;
+					background: rgba(191, 0, 255, 0.1);
+					backdrop-filter: blur(3px);
+					box-shadow: 
+						0 0 20px rgba(191, 0, 255, 0.5),
+						0 0 40px rgba(191, 0, 255, 0.3),
+						inset 0 0 20px rgba(191, 0, 255, 0.1);
+					position: relative;
+					z-index: 10;
+				">
+					impossible is a state of mind
+				</div>
+			</div>
+
+			<style>
+				@keyframes neon-flicker {
+					0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+						text-shadow: 
+							0 0 5px #bf00ff,
+							0 0 10px #bf00ff,
+							0 0 15px #bf00ff,
+							0 0 20px #bf00ff,
+							0 0 25px #bf00ff,
+							0 0 30px #bf00ff;
+					}
+					20%, 24%, 55% {
+						text-shadow: 
+							0 0 2px #bf00ff,
+							0 0 5px #bf00ff,
+							0 0 8px #bf00ff,
+							0 0 12px #bf00ff,
+							0 0 18px #bf00ff,
+							0 0 25px #bf00ff;
+					}
+				}
+				
+				.neon-banner:hover {
+					animation: neon-flicker 0.8s infinite alternate;
+					text-shadow: 
+						0 0 8px #bf00ff,
+						0 0 15px #bf00ff,
+						0 0 25px #bf00ff,
+						0 0 35px #bf00ff,
+						0 0 45px #bf00ff,
+						0 0 55px #bf00ff;
+				}
+				
+				.neon-avatar {
+					border: 3px solid #bf00ff !important;
+					border-radius: 50% !important;
+					box-shadow: 
+						0 0 20px rgba(191, 0, 255, 0.5),
+						0 0 40px rgba(191, 0, 255, 0.3),
+						0 0 60px rgba(191, 0, 255, 0.2),
+						inset 0 0 20px rgba(191, 0, 255, 0.1);
+					animation: neon-avatar-glow 2s infinite alternate;
+					transition: all 0.3s ease-in-out;
+				}
+				
+				.neon-avatar:hover {
+					animation: neon-avatar-glow 0.5s infinite alternate;
+					box-shadow: 
+						0 0 30px rgba(191, 0, 255, 0.7),
+						0 0 60px rgba(191, 0, 255, 0.5),
+						0 0 90px rgba(191, 0, 255, 0.3),
+						inset 0 0 30px rgba(191, 0, 255, 0.2);
+					transform: scale(1.05);
+				}
+				
+				@keyframes neon-avatar-glow {
+					0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+						box-shadow: 
+							0 0 20px rgba(191, 0, 255, 0.5),
+							0 0 40px rgba(191, 0, 255, 0.3),
+							0 0 60px rgba(191, 0, 255, 0.2),
+							inset 0 0 20px rgba(191, 0, 255, 0.1);
+					}
+					20%, 24%, 55% {
+						box-shadow: 
+							0 0 10px rgba(191, 0, 255, 0.3),
+							0 0 20px rgba(191, 0, 255, 0.2),
+							0 0 30px rgba(191, 0, 255, 0.1),
+							inset 0 0 10px rgba(191, 0, 255, 0.05);
+					}
+				}
+			</style>
 
 	</div>
 
@@ -507,6 +616,8 @@
 		} else {
 			document.querySelector('#headerStuck').classList.remove('is-stuck');
 		}
+		
+
 	};
 	var style = localStorage.getItem('data-color-mode');
 	iconElement = document.getElementById('github-icon');
