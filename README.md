@@ -2,8 +2,6 @@
 
 <br>
 
-run locally with:
-
 ```bash
 make server
 ```
