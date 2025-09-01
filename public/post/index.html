@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href='/css/github-style.css' />
 	<link rel="stylesheet" href='/css/light.css' />
 	<link rel="stylesheet" href='/css/dark.css' />
-	<lin rel="stylesheet" href='/css/syntax.css' />
+	<link rel="stylesheet" href='/css/syntax.css' />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
@@ -43,7 +43,19 @@
 		-webkit-animation:blink normal 3s infinite ease-in-out; /* Webkit */
 		-ms-animation:blink normal 3s infinite ease-in-out; /* IE */
 		animation:blink normal 3s infinite ease-in-out; /* Opera and prob css3 final iteration */
-		}​
+		}
+		
+		/* Make navigation tab fonts larger */
+		.UnderlineNav-item {
+			font-size: 18px !important;
+			font-weight: 500;
+		}
+		
+		.UnderlineNav-item.selected {
+			font-weight: 600;
+			border-bottom-width: 4px !important;
+			border-bottom-color: #e85a4f !important;
+		}
 	</style>  
 </head>
 
