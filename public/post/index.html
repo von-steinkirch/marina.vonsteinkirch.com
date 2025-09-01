@@ -72,16 +72,10 @@
 					        <div class="UnderlineNav width-full box-shadow-none hx_UnderlineNav-with-profile-color-modes-banner" style="margin-left: 2rem;">
 					          <nav class="UnderlineNav-body">
 					            <a class="UnderlineNav-item " href="/">
-					        	<svg class="octicon octicon-repo UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16" version="1.1" width="16">
-					                	<path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path>
-					        	</svg>
-					                For Fun && Profit
+									for (fun && profit)
 					            </a>
 					            <a class="UnderlineNav-item  selected " href="https://www.vonsteinkirch.com/post">
-					        	<svg class="octicon octicon-repo UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16" version="1.1" width="16">
-					                	<path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"> </path>
-					              	</svg>
-					        	For Fun || Profit
+									  for (fun || profit)
 					            </a>
 						</nav>
 						<div class="profile-color-modes js-promo-color-modes-banner-profile isInitialToggle">
@@ -196,7 +190,7 @@
 							<div class="d-flex flex-items-center flex-items-stretch">
 						                    <div class="f6 lh-condensed user-status-header d-inline-flex user-status-emoji-only-header circle">
 							                      <div class="user-status-emoji-container flex-shrink-0 mr-2 d-flex flex-items-center flex-justify-center ">
-							                              <div><g-emoji class="g-emoji">💎</g-emoji></div> 
+							                              <div><g-emoji class="g-emoji neon-diamond">💎</g-emoji></div> 
 							                      </div>
 						                    </div>
 							</div>
@@ -204,43 +198,7 @@
 					</div>
 				</div>
 			</div>
-			
-			<!-- Vertical Neon Banner -->
-			<div class="neon-banner-container" style="position: relative; margin-top: 60px; z-index: 10;">
-				<div class="neon-banner" id="neonBanner" style="
-					writing-mode: vertical-rl;
-					text-orientation: mixed;
-					font-size: 24px;
-					font-weight: 900;
-					font-family: 'Orbitron', 'Arial Black', 'Helvetica Bold', sans-serif;
-					color: #efb7e0;
-					text-shadow: 
-						0 0 5px #bf00ff,
-						0 0 10px #bf00ff,
-						0 0 15px #bf00ff,
-						0 0 20px #bf00ff,
-						0 0 25px #bf00ff,
-						0 0 30px #bf00ff,
-						0 0 35px #bf00ff;
-					animation: neon-flicker 2s infinite alternate;
-					transform: rotate(225deg);
-					padding: 25px 12px;
-					border: 3px solid #bf00ff;
-					border-radius: 15px;
-					background: rgba(191, 0, 255, 0.15);
-					backdrop-filter: blur(5px);
-					box-shadow: 
-						0 0 20px rgba(191, 0, 255, 0.6),
-						0 0 40px rgba(191, 0, 255, 0.4),
-						0 0 60px rgba(191, 0, 255, 0.3),
-						inset 0 0 20px rgba(191, 0, 255, 0.2);
-					position: relative;
-					z-index: 10;
-					letter-spacing: 1px;
-				">
-					IMPOSSIBLE IS A STATE OF MIND
-				</div>
-			</div>
+
 
 			<style>
 				@keyframes neon-flicker {
@@ -345,6 +303,40 @@
 							inset 0 0 10px rgba(191, 0, 255, 0.05);
 					}
 				}
+				
+				.neon-diamond {
+					font-size: 1.2em;
+					filter: drop-shadow(0 0 5px #bf00ff) 
+							drop-shadow(0 0 10px #bf00ff) 
+							drop-shadow(0 0 15px #bf00ff) 
+							drop-shadow(0 0 20px #bf00ff);
+					animation: neon-diamond-glow 2s infinite alternate;
+					transition: all 0.3s ease-in-out;
+				}
+				
+				.neon-diamond:hover {
+					animation: neon-diamond-glow 0.5s infinite alternate;
+					filter: drop-shadow(0 0 8px #bf00ff) 
+							drop-shadow(0 0 15px #bf00ff) 
+							drop-shadow(0 0 25px #bf00ff) 
+							drop-shadow(0 0 35px #bf00ff);
+					transform: scale(1.1);
+				}
+				
+				@keyframes neon-diamond-glow {
+					0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+						filter: drop-shadow(0 0 5px #bf00ff) 
+								drop-shadow(0 0 10px #bf00ff) 
+								drop-shadow(0 0 15px #bf00ff) 
+								drop-shadow(0 0 20px #bf00ff);
+					}
+					20%, 24%, 55% {
+						filter: drop-shadow(0 0 3px #bf00ff) 
+								drop-shadow(0 0 8px #bf00ff) 
+								drop-shadow(0 0 12px #bf00ff) 
+								drop-shadow(0 0 18px #bf00ff);
+					}
+				}
 			</style>
 
 	</div>
@@ -362,16 +354,10 @@
 	<div class="UnderlineNav user-profile-nav d-block d-md-none position-sticky top-0 pl-3 ml-n3 mr-n3 pr-3 bg-white" style="z-index:3;">
 		<nav class="UnderlineNav-body">
 			<a class="UnderlineNav-item " href="/">
-				<svg class="octicon octicon-repo UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16" version="1.1" width="16">
-					<path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"> </path>
-				</svg>
-				For Fun && Profit
+				for (fun && profit)
 			</a>
-			<a class='UnderlineNav-item   selected ' href="https://www.bt3gl.xyz/post/">
-				<svg class="octicon octicon-repo UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16" version="1.1" width="16">
-					<path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"> </path>
-				</svg>
-				For Fun || Profit
+			<a class='UnderlineNav-item   selected ' href="https://www.vonsteinkitch.com/post/">
+				for (fun || profit)
 			</a>
 		</nav>
 	</div>
