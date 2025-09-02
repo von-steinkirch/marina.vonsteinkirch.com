@@ -150,9 +150,9 @@
 									</g>
 								</g>
 							</svg>
-							<span class="profile-color-modes-toggle js-promo-color-modes-toggle no-select" tabindex="0" onclick="switchTheme()">
-								<div class="profile-color-modes-toggle-track no-select"></div>
-								<div class="profile-color-modes-toggle-thumb js-promo-color-modes-thumb">
+							<span class="profile-color-modes-toggle js-promo-color-modes-toggle no-select neon-toggle" tabindex="0" onclick="switchTheme()">
+								<div class="profile-color-modes-toggle-track no-select neon-toggle-track"></div>
+								<div class="profile-color-modes-toggle-thumb js-promo-color-modes-thumb neon-toggle-thumb">
 									<svg style="fill: var(--color-profile-color-modes-toggle-moon); margin: 7px 0 0 7px;" width="14" height="13" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z"></path>
 									</svg>
@@ -331,6 +331,85 @@
 								drop-shadow(0 0 8px #bf00ff) 
 								drop-shadow(0 0 12px #bf00ff) 
 								drop-shadow(0 0 18px #bf00ff);
+					}
+				}
+				
+				/* Neon Theme Toggle Effects */
+				.neon-toggle {
+					transition: all 0.3s ease-in-out;
+				}
+				
+				.neon-toggle-track {
+					border: 3px solid #bf00ff !important;
+					box-shadow: 
+						0 0 10px rgba(191, 0, 255, 0.5),
+						0 0 20px rgba(191, 0, 255, 0.3),
+						0 0 30px rgba(191, 0, 255, 0.2),
+						inset 0 0 10px rgba(191, 0, 255, 0.1);
+					animation: neon-toggle-glow 2s infinite alternate;
+					transition: all 0.3s ease-in-out;
+				}
+				
+				.neon-toggle-thumb {
+					box-shadow: 
+						0 0 15px rgba(191, 0, 255, 0.6),
+						0 0 30px rgba(191, 0, 255, 0.4),
+						0 0 45px rgba(191, 0, 255, 0.3),
+						inset 0 0 15px rgba(191, 0, 255, 0.2);
+					animation: neon-toggle-thumb-glow 2s infinite alternate;
+					transition: all 0.3s ease-in-out;
+				}
+				
+				.neon-toggle:hover .neon-toggle-track {
+					animation: neon-toggle-glow 0.5s infinite alternate;
+					box-shadow: 
+						0 0 15px rgba(191, 0, 255, 0.7),
+						0 0 30px rgba(191, 0, 255, 0.5),
+						0 0 45px rgba(191, 0, 255, 0.4),
+						inset 0 0 15px rgba(191, 0, 255, 0.2);
+				}
+				
+				.neon-toggle:hover .neon-toggle-thumb {
+					animation: neon-toggle-thumb-glow 0.5s infinite alternate;
+					box-shadow: 
+						0 0 20px rgba(191, 0, 255, 0.8),
+						0 0 40px rgba(191, 0, 255, 0.6),
+						0 0 60px rgba(191, 0, 255, 0.4),
+						inset 0 0 20px rgba(191, 0, 255, 0.3);
+					transform: scale(1.05);
+				}
+				
+				@keyframes neon-toggle-glow {
+					0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+						box-shadow: 
+							0 0 10px rgba(191, 0, 255, 0.5),
+							0 0 20px rgba(191, 0, 255, 0.3),
+							0 0 30px rgba(191, 0, 255, 0.2),
+							inset 0 0 10px rgba(191, 0, 255, 0.1);
+					}
+					20%, 24%, 55% {
+						box-shadow: 
+							0 0 5px rgba(191, 0, 255, 0.3),
+							0 0 15px rgba(191, 0, 255, 0.2),
+							0 0 25px rgba(191, 0, 255, 0.1),
+							inset 0 0 5px rgba(191, 0, 255, 0.05);
+					}
+				}
+				
+				@keyframes neon-toggle-thumb-glow {
+					0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+						box-shadow: 
+							0 0 15px rgba(191, 0, 255, 0.6),
+							0 0 30px rgba(191, 0, 255, 0.4),
+							0 0 45px rgba(191, 0, 255, 0.3),
+							inset 0 0 15px rgba(191, 0, 255, 0.2);
+					}
+					20%, 24%, 55% {
+						box-shadow: 
+							0 0 8px rgba(191, 0, 255, 0.4),
+							0 0 20px rgba(191, 0, 255, 0.3),
+							0 0 35px rgba(191, 0, 255, 0.2),
+							inset 0 0 8px rgba(191, 0, 255, 0.1);
 					}
 				}
 			</style>
@@ -715,7 +794,102 @@
 		<div class="footer container-xl width-full p-responsive">
 			<div class="pt-6 mt-6"></div>
 		</div>
+		
+		<!-- Neon Slider -->
+		<div class="neon-slider-container">
+			<div class="neon-slider">
+				<span class="neon-text">
+					impossible is a state of mind&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					it always seems impossible until it's done&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					to achieve the impossible, one must attempt the absurd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					the harder the conflict, the greater the triumph&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					victory is sweetest when you've known defeat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					a winner is a dreamer who never gives up&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</span>
+			</div>
+		</div>
 	</div>
 </body>
+
+<style>
+	.neon-slider-container {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 40px;
+		background: var(--color-canvas-default);
+		overflow: hidden;
+		z-index: 1000;
+	}
+	
+	.neon-slider {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		animation: slide-left 20s linear infinite;
+		white-space: nowrap;
+	}
+	
+	.neon-text {
+		font-family: 'Orbitron', monospace;
+		font-size: 14px;
+		font-weight: 700;
+		color: #ffffff;
+		text-shadow: 
+			0 0 4px #bf00ff,
+			0 0 8px #bf00ff,
+			0 0 12px #bf00ff,
+			0 0 16px #bf00ff,
+			0 0 20px #bf00ff,
+			0 0 24px #bf00ff,
+			0 0 28px #bf00ff;
+		animation: neon-flicker 2s infinite alternate;
+		letter-spacing: 1px;
+		padding: 0 30px;
+	}
+	
+	@keyframes slide-left {
+		0% {
+			transform: translateX(100%);
+		}
+		100% {
+			transform: translateX(-100%);
+		}
+	}
+	
+	@keyframes neon-flicker {
+		0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+			text-shadow: 
+				0 0 5px #bf00ff,
+				0 0 10px #bf00ff,
+				0 0 15px #bf00ff,
+				0 0 20px #bf00ff,
+				0 0 25px #bf00ff,
+				0 0 30px #bf00ff,
+				0 0 35px #bf00ff;
+		}
+		20%, 24%, 55% {
+			text-shadow: 
+				0 0 3px #bf00ff,
+				0 0 8px #bf00ff,
+				0 0 12px #bf00ff,
+				0 0 18px #bf00ff,
+				0 0 25px #bf00ff,
+				0 0 32px #bf00ff;
+		}
+	}
+	
+	.neon-slider-container:hover .neon-text {
+		animation: neon-flicker 0.8s infinite alternate;
+		text-shadow: 
+			0 0 8px #bf00ff,
+			0 0 15px #bf00ff,
+			0 0 25px #bf00ff,
+			0 0 35px #bf00ff,
+			0 0 45px #bf00ff,
+			0 0 55px #bf00ff;
+	}
+</style>
 </html>
 
