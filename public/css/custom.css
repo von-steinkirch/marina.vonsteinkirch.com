@@ -96,6 +96,8 @@
 /* Extra padding for the main content box */
 .Box.mt-4 .Box-body {
     padding-left: 5rem !important; /* Much more padding for the main content box */
+    padding-top: 1rem !important; /* Reduced top padding */
+    padding-bottom: 1rem !important; /* Reduced bottom padding */
 }
 
 /* Responsive padding - Adjust for smaller screens */
