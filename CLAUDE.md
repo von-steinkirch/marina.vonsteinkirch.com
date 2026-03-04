@@ -3,12 +3,22 @@
 
 <br>
 
-static site for **marina.vonsteinkirch.com**. Content lives in `public/` and is served as-is.
+* static site for **marina.vonsteinkirch.com**
+* content lives in `public/` and is served as-is
+
+## adding a new blog post
 
 <br>
 
-## run locally
+- add a `.md` file in `public/blog/posts/` with YAML frontmatter (`title`, `date`) and then run:
 
+```bash
+make blog
+```
+
+<br>
+
+## running this page locally
 
 <br>
 
@@ -16,4 +26,4 @@ static site for **marina.vonsteinkirch.com**. Content lives in `public/` and is 
 make server
 ```
 
-or: `cd public && python3 -m http.server 8000`, then open http://localhost:8000
+then open [localhost:8037](http://localhost:8037).

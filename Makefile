@@ -1,5 +1,7 @@
+.PHONY: server blog
 server:
-	cd public && python3 -m http.server 8000
-	echo "server running at http://localhost:8000"
+	cd public && python3 -m http.server 8037
+	echo "server running at http://localhost:8037"
 
-.PHONY: server
+blog:
+	python3 scripts/build_blog.py
