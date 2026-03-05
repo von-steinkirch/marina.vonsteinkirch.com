@@ -52,11 +52,17 @@
 	}
 }
 
+.blog-post-back-wrap {
+	margin-top: 2rem;
+	margin-bottom: 2.5rem;
+	padding-bottom: 0.5rem;
+}
+
 .blog-post-back {
 	display: inline-block;
 	margin-bottom: 2rem;
 	padding: 0.25rem 0;
-	font-size: 0.9rem;
+	font-size: 1.2rem;
 	color: var(--color-fg-muted, #57606a);
 	text-decoration: none;
 	transition: color 0.15s ease;
