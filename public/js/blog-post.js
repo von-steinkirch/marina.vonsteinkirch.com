@@ -68,7 +68,7 @@
 			if (typeof marked === 'function') {
 				try {
 					html = (marked.parse || marked)(parsed.body);
-				} catch (e) {}
+				} catch { /* ignore parse errors */ }
 			}
 			contentEl.innerHTML = html;
 		})

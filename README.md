@@ -1,6 +1,10 @@
-# marina
+# marina.vonsteinkirch.com
 
-static site for **marina.vonsteinkirch.com**. content lives in `public/` and is served as-is.
+<br>
+
+- static site for **marina.vonsteinkirch.com**. content lives in `public/` and is served as-is.
+
+<br>
 
 ## adding a new blog post
 
@@ -10,6 +14,8 @@ add a `.md` file in `public/blog/posts/` with YAML frontmatter (`title`, `date`)
 make blog
 ```
 
+<br>
+
 ## running locally
 
 ```bash
@@ -18,15 +24,23 @@ make server
 
 then open [localhost:8037](http://localhost:8037).
 
-## pre-commit (link everything)
+<br>
 
-a pre-commit hook runs `make link` before each commit so the blog index and links stay up to date.
+## pre-commit (link + lint)
+
+pre-commit runs `make link` (blog index and links) and lints all HTML and JS files before each commit.
 
 **setup:**
 
 ```bash
-pip install pre-commit
+pip install pre-commit html5validator
 pre-commit install
 ```
 
-after that, every `git commit` runs `make link` automatically. to run manually: `make link` or `pre-commit run --all-files`.
+you need **Node.js** installed for the ESLint hook. then every `git commit` runs the link step and linting automatically. to run manually: `make link` or `pre-commit run --all-files`.
+
+<br>
+
+## license
+
+[MIT](LICENSE)

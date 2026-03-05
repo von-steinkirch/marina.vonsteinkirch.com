@@ -1,3 +1,4 @@
+// Used from HTML (e.g. onclick). eslint-disable-next-line no-unused-vars
 function switchTheme() {
   const currentStyle = currentTheme();
 

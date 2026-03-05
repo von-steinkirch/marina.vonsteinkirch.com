@@ -30,10 +30,10 @@ then open [localhost:8037](http://localhost:8037).
 
 <br>
 
-## pre-commit (link everything)
+## pre-commit (link + lint)
 
 <br>
 
-- a pre-commit hook runs `make link` before each commit so the blog index and links stay up to date
-- setup: `pip install pre-commit`, then `pre-commit install`
+- a pre-commit hook runs `make link` (blog index and links) and lints all HTML and JS before each commit
+- setup: `pip install pre-commit html5validator`, then `pre-commit install`; Node.js required for the ESLint hook
 - run manually: `make link` or `pre-commit run --all-files`
