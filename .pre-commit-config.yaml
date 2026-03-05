@@ -1,0 +1,9 @@
+# See https://pre-commit.com for usage
+repos:
+  - repo: local
+    hooks:
+      - id: link
+        name: link (build blog / wire everything)
+        entry: make link
+        language: system
+        pass_filenames: false
