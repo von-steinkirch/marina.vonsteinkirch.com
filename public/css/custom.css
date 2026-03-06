@@ -53,6 +53,13 @@
     color: HotPink;
 }
 
+/* Journey page footnote (bottom of content box) */
+p.journey-footnote {
+    font-size: 0.5rem !important;
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+}
+
 /* Journey page hero title – ensure Orbitron applies */
 .journey-title {
     font-family: 'Orbitron', monospace !important;
