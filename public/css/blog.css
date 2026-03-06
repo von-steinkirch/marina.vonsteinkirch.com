@@ -13,16 +13,16 @@
 	padding: 0.5rem 0;
 }
 
-/* Blog list titles: same color as post title (HotPink / #ff9ecd in dark) */
+/* Blog list titles: same green as Q&A / other pages (#1cffb3) */
 #blog-list .qa-question-text a {
-	color: HotPink;
+	color: #1cffb3;
 	text-decoration: none;
 }
 #blog-list .qa-question-text a:hover {
 	text-decoration: underline;
 }
 [data-color-mode=dark] #blog-list .qa-question-text a {
-	color: #ff9ecd;
+	color: #1cffb3;
 }
 
 /**
@@ -191,4 +191,92 @@
 
 [data-color-mode=dark] .blog-post-body a {
 	color: #ff7b72;
+}
+
+/**
+ * Buttondown newsletter subscribe form
+ */
+.newsletter-subscribe {
+	margin-top: 2.5rem;
+	padding-top: 2rem;
+	border-top: 1px solid var(--color-border-default, #d0d7de);
+	max-width: 42rem;
+}
+
+.newsletter-subscribe--post {
+	margin: 2rem auto 0;
+	padding: 2rem 0 0;
+}
+
+.newsletter-subscribe-title {
+	font-family: 'Orbitron', monospace;
+	font-size: 1.1rem;
+	font-weight: 700;
+	margin: 0 0 0.75rem;
+	color: HotPink;
+}
+
+.newsletter-form {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5rem 1rem;
+}
+
+.newsletter-label {
+	font-size: 0.9rem;
+	color: var(--color-fg-muted, #57606a);
+}
+
+.newsletter-input {
+	flex: 1;
+	min-width: 12rem;
+	padding: 0.4rem 0.75rem;
+	font-size: 0.95rem;
+	border: 1px solid var(--color-border-default, #d0d7de);
+	border-radius: 6px;
+	background: var(--color-canvas-default, #ffffff);
+	color: var(--color-fg-default, #1f2328);
+}
+
+.newsletter-input::placeholder {
+	color: var(--color-fg-muted, #57606a);
+}
+
+.newsletter-input:focus {
+	outline: none;
+	border-color: HotPink;
+	box-shadow: 0 0 0 2px rgba(255, 105, 180, 0.2);
+}
+
+.newsletter-submit {
+	padding: 0.4rem 1rem;
+	font-family: 'Orbitron', monospace;
+	font-size: 0.9rem;
+	font-weight: 700;
+	color: #fff;
+	background: HotPink;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: opacity 0.15s ease, transform 0.1s ease;
+}
+
+.newsletter-submit:hover {
+	opacity: 0.9;
+	transform: scale(1.02);
+}
+
+[data-color-mode=dark] .newsletter-subscribe-title {
+	color: #ff9ecd;
+}
+
+[data-color-mode=dark] .newsletter-input {
+	background: var(--color-canvas-default);
+	border-color: var(--color-border-default);
+}
+
+[data-color-mode=dark] .newsletter-submit {
+	background: #ff9ecd;
+	color: #1f2328;
 }
