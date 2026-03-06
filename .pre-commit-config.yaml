@@ -1,10 +1,17 @@
 # See https://pre-commit.com for usage
+# On each commit: link (build blog), tests (pytest), Python linter (ruff), JS linter (eslint)
+# Setup: pip install pre-commit && pre-commit install
 repos:
   - repo: local
     hooks:
       - id: link
         name: link (build blog / wire everything)
         entry: make link
+        language: system
+        pass_filenames: false
+      - id: test
+        name: test (pytest)
+        entry: make test
         language: system
         pass_filenames: false
       # HTML validation disabled (requires Java). Run manually: html5validator public/
@@ -14,6 +21,11 @@ repos:
       #   language: python
       #   types: [html]
       #   additional_dependencies: [html5validator]
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.4
+    hooks:
+      - id: ruff
+        args: [--fix]
   - repo: https://github.com/pre-commit/mirrors-eslint
     rev: v9.39.1
     hooks:
