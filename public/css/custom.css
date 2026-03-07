@@ -127,6 +127,35 @@ p.journey-footnote {
     display: block;
 }
 
+/* Buy me a Coffee – button below Current Motivation box */
+.coffee-btn {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    color: rgb(18, 246, 87);
+    background: rgba(18, 246, 87, 0.12);
+    border: 0.5px solid rgb(18, 246, 87);
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 0 12px rgba(18, 246, 87, 0.25);
+    font-family: inherit;
+}
+.coffee-btn:hover {
+    background: rgb(18, 246, 87);
+    color: var(--color-canvas-default, #0d1117);
+    box-shadow: 0 0 20px rgba(18, 246, 87, 0.5);
+    transform: scale(1.04);
+}
+.coffee-btn:focus {
+    outline: 0.5px solid rgb(18, 246, 87);
+}
+
+.coffee-btn-wrap {
+    margin-top: 2.5rem !important;
+}
+
 .mobile-nav-sticky {
     z-index: 3;
 }
