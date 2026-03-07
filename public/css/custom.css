@@ -154,6 +154,11 @@ p.journey-footnote {
 
 .coffee-btn-wrap {
     margin-top: 2.5rem !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .mobile-nav-sticky {
