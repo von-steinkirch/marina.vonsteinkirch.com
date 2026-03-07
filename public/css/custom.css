@@ -155,6 +155,15 @@ p.journey-footnote {
 .coffee-btn-wrap {
     margin-top: 2.5rem !important;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.coffee-btn-row {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
