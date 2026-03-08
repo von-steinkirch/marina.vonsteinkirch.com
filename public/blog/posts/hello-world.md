@@ -1,15 +1,14 @@
 ---
-title: Hello World
-date: 2026-03-04
+title: Week I: Hello World
+date: 2026-03-06
 ---
 
 Hello there, anon.
 
 <br><br>
 
-I love writing, so I'll be using this space to share my technical notes on AI && science.
+I love writing, so i'll use this space as a weekly check-in to share technical notes and thoughts on AI, science, and engineering.
 
 <br><br>
 
-See you soon.
-
+Expect a new post every Friday.

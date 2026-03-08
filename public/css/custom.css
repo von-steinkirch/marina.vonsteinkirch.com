@@ -437,7 +437,7 @@ p.journey-footnote {
     }
 }
 
-/* Neon slider styles */
+/* Neon slider styles – seamless infinite scroll */
 .neon-slider-container {
     position: fixed;
     bottom: 0;
@@ -453,8 +453,28 @@ p.journey-footnote {
     display: flex;
     align-items: center;
     height: 100%;
-    animation: slide-left 20s linear infinite;
-    white-space: nowrap;
+    width: 100%;
+}
+
+.neon-slider-track {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: max-content;
+    min-width: 100%;
+    height: 100%;
+    animation: neon-slide-left 40s linear infinite;
+    will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .neon-slider-track {
+        animation-duration: 60s;
+    }
+}
+
+.neon-slider-container:hover .neon-slider-track {
+    animation-play-state: paused;
 }
 
 .neon-text {
@@ -473,14 +493,16 @@ p.journey-footnote {
     animation: neon-flicker 2s infinite alternate;
     letter-spacing: 1px;
     padding: 0 30px;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
-@keyframes slide-left {
+@keyframes neon-slide-left {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 
