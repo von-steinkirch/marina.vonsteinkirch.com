@@ -4,10 +4,9 @@ import json
 from pathlib import Path
 from unittest.mock import patch
 
-import pytest
 
 # Import after potentially patching BLOG_DIR
-from scripts.build_blog import BLOG_DIR, main, parse_frontmatter
+from scripts.build_blog import main, parse_frontmatter
 
 
 class TestParseFrontmatter:

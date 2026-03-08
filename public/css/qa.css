@@ -84,3 +84,11 @@
 	line-height: 1.7;
 	margin: 0;
 }
+
+/* Sidebar "Connect Professionally" title – same pink as newsletter subscription title */
+.Box-header .highlight-text.news-title-center {
+	color: HotPink;
+}
+[data-color-mode=dark] .Box-header .highlight-text.news-title-center {
+	color: #ff9ecd;
+}
