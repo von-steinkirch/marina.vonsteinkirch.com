@@ -7,12 +7,12 @@
 	var metaEl = document.getElementById('post-meta');
 
 	if (!slug || !contentEl) {
-		contentEl.innerHTML = '<p class="text-gray">Missing post.</p> <p><a href="./">Back to Dr.\'s AI Science Blog</a></p>';
+		contentEl.innerHTML = '<p class="text-gray">Missing post.</p> <p><a href="./">Back to for (fun || profit)</a></p>';
 		return;
 	}
 	slug = slug.replace(/[^a-z0-9-_]/gi, '');
 	if (!slug) {
-		contentEl.innerHTML = '<p class="text-gray">Invalid post.</p> <p><a href="./">Back to Dr.\'s AI Science Blog</a></p>';
+		contentEl.innerHTML = '<p class="text-gray">Invalid post.</p> <p><a href="./">Back to for (fun || profit)</a></p>';
 		return;
 	}
 
@@ -40,7 +40,7 @@
 	}
 
 	function showError(msg) {
-		contentEl.innerHTML = '<p class="text-gray">' + msg + '</p> <p><a href="./">Back to Dr.\'s AI Science Blog</a></p>';
+		contentEl.innerHTML = '<p class="text-gray">' + msg + '</p> <p><a href="./">Back to for (fun || profit)</a></p>';
 	}
 
 	var timeout = setTimeout(function() {
